@@ -5,13 +5,13 @@ body, html {
   color: White;
 }
 
-.cd-logo, .kitchen-equipment, .cake-ingredients, .mixer {
+.cd-logo, .kitchen-equipment, .cake-ingredients, .mixer, .parallax, .oven, .rosecake {
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #642580;
   background-size: cover;
-  min-height: 100%;
+  min-height: 80%;
 
   background-attachment: fixed;
 }
@@ -35,6 +35,10 @@ h3 {
   padding:50px 80px;
 }
 
+.parallax {
+  background-image: url("img_parallax.jpg");
+}
+
 .kitchen-equipment {
   background-image: url("utensils.JPG");
 }
@@ -45,6 +49,15 @@ h3 {
 
 .mixer {
   background-image: url("mixer.jpg");
+}
+
+.oven {
+  background-image: url("oven.jpg");
+}
+
+.rosecake {
+  background-image: url("rosecake.jpg");
+  min-height: 50%;
 }
 
 .caption {
@@ -60,4 +73,11 @@ h3 {
   padding: 18px;
   font-size: 25px;
   letter-spacing: 10px;
+}
+
+/* Turn off parallax scrolling for tablets and phones as it is not supported */
+@media only screen and (max-device-width: 1024px) {
+  .cd-logo, .layer-cake, .kitchen-equipment, .cake-ingredients, .bowl-of-cakemix, .cake-in-oven, .decorated-cake {
+      background-attachment: scroll;
+  }
 }
